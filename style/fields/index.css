@@ -50,8 +50,7 @@ position: relative;
     }
 
     select{
-        background:url(url../../assets/icons/arrow-down-01.svg)
-        no-repeat calc(-1rem);
+        background:url(../../assets/icons/arrow-down-01.svg)no-repeat calc(-1rem);
         
     }
     
