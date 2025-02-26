@@ -20,10 +20,10 @@ label{
 
 input:focus,
 select:focus,
-textarea:focus {
-
+textarea:focus
+input[type="date"]:focus-within{
     outline: .25rem solid var(--surface-secondary);
-    border: .125rem solid var(--surface-highlight);
+    border: .125rem solid var(--stroke-highlight);
     outline-offset: .1px;
 
 }

@@ -9,7 +9,7 @@
     text-align: center;
     padding: 1.75rem 1rem;
     
-    position: absolute;
+    position: relative;
     & input {
         position: absolute;
         width: 100%;
@@ -21,7 +21,7 @@
         color: #a8a29e;
     }
 
-    &:hover{
+    &:hover , &:has(input:focus) {
         border-width: 2px;
         border-color: var(--stroke-highlight);
         background-color: var(--surface-secondary);
@@ -31,4 +31,8 @@
     & p{
         color: var(--text-tertiary);
     }
+    & svg path{
+        stroke:var(--stroke-highlight);
+    }
+    
 }
