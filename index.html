@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+'<!DOCTYPE html>
 <html lang="PT-BR">
     <head>
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -79,34 +79,89 @@
                     </div>
 
                     </fieldset>
+                
                 <fieldset class="address">
                     <legend>Endereço Residencial</legend>
 
                     <div class="input-wrapper">
-                        <label for="CEP"></label>
+                        <label for="cep">CEP</label>
                         <input type="text" id="cep" name="cep">
                     </div>
+                    
                     <div class="flex">
                         <div class="input-wrapper flex-2">
-                            <label for="city">Cidade</label>
-                            <input type="text" id="city" name="city"
-                            value="São Paulo" disabled>
-                        </div>
-                    </div>
-                    <div class="input-wrapper flex-1">
-                        <label for="state">Estado</label>
-                        <input type="text" id="state" name="state" disabled>
-                    </div>
-                    <div class="flex">
-                        <div class="input-wrapper flex-2">
-                            <label for="street"></label>
-                            <input type="text" id="street" name="street"
-                            value="Rua das Flores" disabled>
+                            <label for="street">Rua</label>
+                            <input type="text" id="street" name="street" value="Rua das Flores" disabled>
                         </div>
                     </div>
                     <div class="input-wrapper flex-1">
                         <label for="number">Número</label>
-                        <input type="number" id="number" name="number">
+                        <input type="number" id="number" name="number" >
+                        
+                    </div>
+                    <div class="flex">
+                        <div class="input-wrapper flex-2">
+                            <label for="city">Cidade</label>
+                            <input type="text" id="city" name="city" value="São Paulo" disabled>
+                        </div>
+                    </div>
+                    <div class="input-wrapper flex-1">
+                        <label for="state">Estado</label>
+                        <input type="text" id="state" name="state" disabled value="SP">
+                    </div>
+                </fieldset>
+
+                <fieldset class="guardian">
+                    <legend>Informações do responsavel</legend>
+                   <div class="input-wrapper">
+                    <label for="gardian">Nome do responsável</label>
+                    <input type="text" id ="gardian" name="gardian">
+                    <small>Principal responsável legal e contato de emergência</small>
+                    </div>
+
+                    <div class="input-wrapper>">
+                        <label for="phone">Telefone</label>
+                        <input type="text" name="phone" id="phone"placeholder="(10)9 8765-4321">
+                    </div>
+                    <div class="input-wrapper">
+                        <label for="mail">Email</label>
+                        <input type="email" name="mail" id="mail" 
+                        required>
+                        <div class="error">
+                            <img src="assets/icons/alert-circle.svg" alt="Ícone de alerta vermelho">
+                            <span>Insira um e-mail válido</span>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <fieldset class="enroll-options">
+                    <legend>Opções de matrícula</legend>
+
+                    <div class="input-wrapper">
+                        <label>Selecione o turno de estudo</label>
+                        
+                        <div class="radio-wrapper">
+                            <div class="radio-inner">
+                                <div class="radio-image">
+                                    <input type="radio"name="study-shift"
+                                    value="morning"id="morning">
+                                    <img src="assets/icons/sun-cloud-02.svg" 
+                                    alt="icone de sol com nuvem">
+                                    <label for="morning">Manhã</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="radio-wrapper">
+                            <div class="radio-inner">
+                                <div class="radio-image">
+                                    <input type="radio"name="study-shift"
+                                    value="evening"id="evening">
+                                    <img src="assets/icons/sun-02.svg" 
+                                    alt="icone de sol com nuvem">
+                                    <label for="evening">Tarde</label>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </fieldset>
                 </form>
@@ -132,6 +187,6 @@
                     alt="Ilustração de uma professora ensinando os alunos">
                 <div class="aside-container"></div>
             </aside>
-
         </body>
-    </html>
+        
+    </html>'
