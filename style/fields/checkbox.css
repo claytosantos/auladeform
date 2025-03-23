@@ -7,7 +7,7 @@
 
     & strong{
         font-weight: 500;
-        color:var(--text--highlight)
+        color:var(--stroke-highlight)
     }
 }
 
@@ -29,7 +29,8 @@
    
     }
 
-    &:hover,&:focus-within{
+    &:hover,
+    &:focus-within{
         .checkbox-image{background-image: url(../../assets/icons/checkbox-hover.svg);
 
     }

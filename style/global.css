@@ -21,13 +21,15 @@
     --stroke-default: #D6D3D1;
     --stroke-highlight: #F3541C;
     --semantic-error: #DC2626;
+    --semantic-success: #059669;
 }
 
 body {
     overflow: hidden;
-
     font: var(--text);
     color: var(--text-secondary);
+    margin: 0;
+    padding: 0;
 }
 
 h1,
@@ -42,12 +44,227 @@ img {
 
 .flex {
     display: flex;
+    gap: 1rem;
 }
 
 .flex-1 {
-    flex: 1
+    flex: 1;
 }
 
 .flex-2 {
-    flex: 2
+    flex: 2;
+}
+
+/* Novos estilos para validação e feedback */
+.required {
+    color: var(--semantic-error);
+    margin-left: 0.25rem;
+}
+
+.error {
+    color: var(--semantic-error);
+    font-size: 0.875rem;
+    margin-top: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.error img {
+    width: 1rem;
+    height: 1rem;
+}
+
+input[aria-invalid="true"],
+select[aria-invalid="true"],
+textarea[aria-invalid="true"] {
+    border-color: var(--semantic-error);
+}
+
+input[aria-invalid="true"]:focus,
+select[aria-invalid="true"]:focus,
+textarea[aria-invalid="true"]:focus {
+    outline-color: var(--semantic-error);
+}
+
+/* Estilos para feedback de sucesso */
+.success-message {
+    background-color: var(--semantic-success);
+    color: white;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    margin-top: 1rem;
+    display: none;
+}
+
+.success-message.show {
+    display: block;
+}
+
+/* Estilos para campos desabilitados */
+input:disabled {
+    background-color: var(--surface-disabled);
+    cursor: not-allowed;
+}
+
+/* Estilos para o botão de salvar */
+.btn-secondary {
+    background-color: var(--surface-secondary);
+    color: var(--text-highlight);
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.btn-secondary:hover {
+    background-color: #FDD5C2;
+}
+
+/* Estilos para o botão principal */
+.btn-primary {
+    background-color: var(--text-highlight);
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.btn-primary:hover {
+    background-color: #D6320D;
+}
+
+/* Estilos para o formulário */
+form {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+fieldset {
+    border: none;
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background-color: var(--surface-primary);
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+legend {
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: var(--text-primary);
+}
+
+/* Estilos para campos de formulário */
+.input-wrapper {
+    margin-bottom: 1.5rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--text-primary);
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid var(--stroke-default);
+    border-radius: 0.5rem;
+    font: var(--text);
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: var(--stroke-highlight);
+}
+
+/* Estilos para o dropzone */
+.dropzone {
+    border: 2px dashed var(--stroke-default);
+    border-radius: 0.5rem;
+    padding: 2rem;
+    text-align: center;
+    cursor: pointer;
+    transition: border-color 0.2s;
+}
+
+.dropzone:hover {
+    border-color: var(--stroke-highlight);
+}
+
+/* Estilos para os radio buttons personalizados */
+.radio-wrapper {
+    margin-bottom: 1rem;
+}
+
+.radio-inner {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.radio-image {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* Estilos para o checkbox personalizado */
+.checkbox-wrapper {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+}
+
+.checkbox-image {
+    width: 1.25rem;
+    height: 1.25rem;
+    border: 1px solid var(--stroke-default);
+    border-radius: 0.25rem;
+    margin-top: 0.25rem;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    form {
+        padding: 1rem;
+    }
+
+    fieldset {
+        padding: 1rem;
+    }
+
+    .flex {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .flex-1,
+    .flex-2 {
+        width: 100%;
+    }
+}
+
+#app {
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    margin: 0;
+    padding: 0;
+}
+
+.main-container {
+    margin: 0;
+    padding: 1rem;
 }

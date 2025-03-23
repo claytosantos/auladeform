@@ -24,7 +24,8 @@
         color: #A8A29E;
     }
 
-    &:hover, &:has(input:focus) {
+    &:hover,
+     &:has(input:focus) {
         outline-width: 0;
         border-color: var(--stroke-highlight);
         background-color: var(--surface-secondary);
